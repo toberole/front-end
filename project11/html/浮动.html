@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        
+            设置float:可使元素在其父元素范围内浮动
+            1、元素设置float之后 会脱离文档流 
+                块元素：
+                    不再独占一行，宽和高度变成wrap_content
+                行内元素：
+                    变成块元素，可以设置宽度和高度
+            
+            2、设置float属性后面的元素 会自动补齐占用脱离文档流元素的位置
+            3、浮动元素向左向右浮动时 不会遮挡其他的浮动元素
+            4、如果浮动元素的上面是一个没有浮动的块元素 那么当前元素也无法浮动
+            5、浮动元素 不会遮挡文字
+         */
+        .box1 {
+            height: 200px;
+            width: 200px;
+            background-color: brown;
+            float: right;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+        }
+
+        .box3 {
+            width: 600px;
+            height: 600px;
+        }
+
+        .box4 {
+            background-color: blue;
+            width: 200px;
+            float: left;
+            height: 200px;
+        }
+
+        .box5 {
+            float: left;
+            background-color: blanchedalmond;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+    <div class="box3">
+        <div class="box4"></div>
+        <div class="box5"></div>
+    </div>
+</body>
+
+</html>

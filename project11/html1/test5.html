@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超链接</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        a {
+            color: blueviolet;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        a标签是行内元素 
+        a标签内部可以放置除a标签之外的任何标签
+        target="_blank" 新开一个网页
+    -->
+    <a href="https://www.baidu.com" target="_blank">java</a>
+    <a href="https://www.baidu.com">cpp</a>
+
+    <!-- 
+        超链接回到网页顶部 
+        回到网页指定位置 href="#指定元素的id"
+    -->
+    <a href="#">回到网页顶部</a>
+
+    <a href="#div1">去到div1</a>
+
+    <div id="div1"></div>
+
+    <!-- img 标签 介于 块元素和行内元素之间，具有两种元素的某些特点 -->
+    <img src="./1.png" alt=这是一张图片" width="100px" height="200px">
+
+    <!-- ifream 不会被爬虫爬取 -->
+    <iframe src="./test1.html" width="100px" height="100px" frameborder="0"></iframe>
+
+    <!-- 
+        controls 指定是否可以控制播放
+        autoplay 自动播放
+        loop 循环播放
+    -->
+    <video src="./0.mp4" controls autoplay loop></video>
+    <video>
+        <source src="./0.mp4">
+    </video>
+</body>
+
+</html>

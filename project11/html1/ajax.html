@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax 网络请求</title>
+
+    <script>
+        /*
+            1、创建 XMLHTTPRequest 对象
+            2、使用 open 方法创建 http 请求，并设置请求地址
+            xhr.open（get/post，url，async，true（异步），false（同步））经常使用前三个参数
+            3、设置发送的数据，用 send 发送请求
+            4、注册事件（给 ajax 设置事件）
+            5、获取响应并更新页面
+        */
+        function Api({ url, method = 'GET', header = {}, callback = function () { } }) {
+
+            const xhr = new XMLHttpRequest();
+            xhr.open(method, url);
+            xhr.responseType = 'json';
+
+            for (let x in header) {
+                xhr.setRequestHeader(x, header[x]);
+            }
+
+            xhr.send();
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    callback(xhr.response);
+                }
+            }
+        }
+
+        function Api({ url, method = 'GET' }) {
+            return new Promise((resolve, reject) => {
+                const xhr = new XMLHttpRequest();
+                xhr.open(method, url);
+                xhr.responseType = 'json';
+
+                // for (let x in header) {
+                // xhr.setRequestHeader(x, header[x]);
+                // }
+
+                xhr.send();
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        resolve(xhr.response);
+                        // resolve才有api({}).then()方法
+                    }
+                }
+            })
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

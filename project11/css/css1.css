@@ -1,0 +1,21 @@
+﻿body {
+    background-color: aliceblue;
+    width: auto;
+    height: auto;
+}
+
+div {
+    text-align: left;
+}
+
+/* id选择器 以"#"开头*/
+#test {
+    font-size: 25px;
+    font-style: #0f0;
+}
+
+/* class选择器 以 "." 开头 */
+.container {
+    background-color: blue;
+    text-align: center;
+}

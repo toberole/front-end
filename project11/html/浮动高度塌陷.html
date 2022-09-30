@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    
+</body>
+</html>
+
+<!-- 
+BFC全称 (Block Formatting Context) 块级格式化环境
+
+解决高度塌陷的四种方法：
+    BFC
+    clear
+    使用伪类after
+    clearfix
+
+元素开启BFC的特点:
+    1、开启BFC的元素不会被浮动元素所覆盖
+    2、开启BFC的元素子元素和父元素外边距不会重叠
+    3、开启BFC的元素可以包含子元素
+
+开启BFC的方式:
+    1、设置元素的浮动
+    2、将元素设置为行内块元素
+    3、将元素的overflow设置为一个非visible的值
+    （常用的方式为元素设置overflow：hidden开启BFC）
+    overflow: hidden;  //推荐使用这个方法
+
+clear
+清除浮动元素对当前元素产生的影响
+属性值：
+    left 清除左侧浮动元素对当前元素的影响
+    right 清除右侧浮动元素对当前元素的影响
+    both 清除两侧中影响最大的
+    /* 清除左(右)侧的浮动 */
+    /* clear: left; */
+    /* clear: right; */
+    /* 清除两侧中最大影响的一侧 */
+    clear: both;
+
+
+使用after伪类解决高度塌陷
+    给父元素添加一个伪类 after
+    after 是行内元素，需要修改为块元素
+    clear 清除相对应的浮动
+    /* 给父元素添加一个伪类after */
+    .box1::after{
+        content: '';
+        /* after默认是行内元素，需要修改为块元素 */
+        display: block;
+        clear: both;
+    }
+
+clear fix
+    解决高度塌陷和外边距重叠
+    <!-- HTML部分 -->
+    <div class="box1 clearfix">
+        <div class="box2"></div>
+    </div>
+    /* CSS部分 */
+    .clearfix::before,  //意为在类名为clearfix的最后面和前面添加下面的内容
+    .clearfix::after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+ -->

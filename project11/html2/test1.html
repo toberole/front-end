@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 
+            兄弟元素相邻垂直外边距 距离取最大值，一般不需要处理
+
+            父子元素 垂直上边距 会传递给父元素
+                处理方案，不让父子垂直外边距相邻【可以给父元素加一个外边框，需要调整高度】
+                    
+        */
+        .d1,
+        .d2 {
+            width: 200px;
+            height: 200px;
+        }
+
+        .d1 {
+            background-color: blueviolet;
+        }
+
+        .d2 {
+            background-color: blanchedalmond;
+        }
+
+        .d3 {
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+        }
+
+        .d4 {
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1"></div>
+    <div class="d2"></div>
+
+    <br><br><br>
+
+    <div class="d3">
+        <div class="d4"></div>
+    </div>
+</body>
+
+</html>

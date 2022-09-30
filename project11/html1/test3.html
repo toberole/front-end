@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>语意化标签</title>
+</head>
+
+<body>
+    <!-- 
+        块元素，主要用于网页结构的布局
+            独占一行
+
+        行内元素，主要用于表达网页具体内容
+            不独占一行
+
+        一般情况下
+            在块元素内部放置 行内元素
+            块元素中可以放置任何元素，但是注意p元素中不能放置块元素
+            否则浏览器会自动处理
+ -->
+</body>
+<div>
+    块元素，主要用于网页结构的布局<br>
+    独占一行<br>
+
+    行内元素，主要用于表达网页具体内容<br>
+    不独占一行<br>
+
+    一般情况下<br>
+    在块元素内部放置 行内元素<br>
+    块元素中可以放置任何元素，但是注意p元素中不能放置块元素<br>
+    否则浏览器会自动处理<br>
+</div>
+<p>
+    计算机
+    <!-- div 元素放置在p标签内部，会被浏览器布局纠正【将div标签移出p标签】 -->
+<div>java</div>
+</p>
+
+</html>

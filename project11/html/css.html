@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 标签选择 */
+        p {
+            font-size: 33px;
+            color: blue;
+            background-color: brown;
+        }
+
+        /* id选择 #开头*/
+        #id1 {
+            background-color: aqua;
+            color: chartreuse;
+            font-size: 77;
+        }
+
+        /* clsss选择器 */
+        .class1 {
+            background-color: black;
+            font-style: italic;
+            color: darkkhaki;
+        }
+
+
+        div.class2 {
+            color: rgb(255, 0, 8);
+            background-color: blue;
+        }
+
+        .c2 {
+            background-color: brown;
+        }
+
+        /* 选择p 和 div */
+        p,
+        div {
+            background-color: darkslategray;
+        }
+    </style>
+</head>
+
+<body>
+    <p>计算机</p>
+
+    <p id="id1">计算机</p>
+
+    <p class="class1">计算机</p>
+
+    <div class="class2">div 计算机</div>
+
+    <!-- 一个元素多个类 -->
+    <div class="c1 c2 c3">ddd</div>
+</body>
+
+</html>

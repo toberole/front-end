@@ -1,0 +1,6 @@
+﻿/* 解决高度塌陷 和 外边距重叠问题 */
+.clearfix::before .clearfix::after {
+    display: table;
+    content: '';
+    clear: both;
+}

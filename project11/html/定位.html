@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h {
+            /* 
+            position 
+                static 默认值 不开启定位
+                relative 
+                    相对于元素在文档流中的正常的位置来定位
+                    开启相对定位会提升文档的层级
+                absolute 
+                    开启之后 元素会脱离文档流
+                    行内元素变成块元素
+                    相对于其包含块定位
+                        包含块
+                            最近的开启相对定位的祖先元素
+                            
+                fixed 
+                    特殊的一种绝对定位，不同点在于 参考点是浏览器的视口
+                sticky 
+            
+            offset 可以通过偏移量 改变元素的位置
+                top 
+                bottom 
+                left
+                right
+            */
+            position: sticky;
+        }
+
+        .d1 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+        }
+
+        .d2 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: relative;
+            top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1">
+        <div class="d2"></div>
+    </div>
+</body>
+
+</html>

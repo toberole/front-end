@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 
+        造成这种现象的原因是img是一个内联元素，而内联元素的特点是“行布局”，这意味着内联元素的默认对齐方式是与其父基线对齐，但开口高度确实是整体高度，包括从基线到底部的部分，所以会造成这种间隙。
+     -->
+    <style type="text/css">
+        img {
+            height: 200px;
+            margin: 0;
+            padding: 0;
+            /* border-bottom: 1px solid red; */
+        }
+
+        ul li {
+            font-size: 0px;
+        }
+
+        ul {
+            /* border: 1px solid blue; */
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+
+    ​
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li><img src="../img/2.jpg" alt="" /></li>
+            <li><img src="../img/2.jpg" alt="" /></li>
+            <li><img src="../img/2.jpg" alt="" /></li>
+        </ul>
+    </div>
+</body>
+
+</html>

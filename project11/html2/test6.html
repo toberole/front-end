@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        ul {
+            letter-spacing: -4px;
+            /*根据不同字体字号或许需要做一定的调整*/
+            word-spacing: -4px;
+            font-size: 0;
+        }
+
+        ul li {
+            font-size: 16px;
+            letter-spacing: normal;
+            word-spacing: normal;
+            display: inline-block;
+            zoom: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer" style="background-color:#FF0000 ;">
+        <ul>
+            <li><img src="../img/1.jpg" alt="" /></li>
+            <li><img src="../img/1.jpg" alt="" /></li>
+            <li><img src="../img/1.jpg" alt="" /></li>
+            <!-- 
+        造成这种现象的原因是img是一个内联元素，而内联元素的特点是“行布局”，这意味着内联元素的默认对齐方式是与其父基线对齐，但开口高度确实是整体高度，包括从基线到底部的部分，所以会造成这种间隙。
+        那么针对这种情况也有对应的几种解决方法： 
+
+        1.设置元素display：block 
+        其实这种方法的主要实现原理就是把愿意来的内联元素变成块级元素，既然你内联元素有这种特性，那我就把你变成块级元素，不存在这种特性那自然就不会有问题了   
+
+        2.设置元素float 
+        这种方法实现的原理主要是使元素脱离正常文档流，那么就不会受这种baseline对齐的影响了 
+
+        3.设置父级元素font-size：0 
+        其实基线的位置是与字体相关的，不同的 font-size会影响到这个空隙的大小。父级的font-size设置为零，那么元素也没办法以父级的基线为对齐标准了 
+
+        4.改变vertical-align的值 
+        既然元素默认对齐方式是以baseline对齐的，那么通过改变vertical-align的值来改变元素的对齐方式那就不会有问题了
+
+     -->
+            <style type="text/css">
+                img {
+                    display: block;
+                }
+            </style>
+
+            ​
+            </head>
+
+            <body>
+                <div>
+                    <ul>
+                        <li><img src="../img/2.jpg" alt="" /></li>
+                        <li><img src="../img/2.jpg" alt="" /></li>
+                        <li><img src="../img/2.jpg" alt="" /></li>
+                    </ul>
+                </div>
+            </body>
+
+</html>

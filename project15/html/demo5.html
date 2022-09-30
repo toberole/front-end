@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        {{name}}
+    </div>
+
+    <script type="text/javascript">
+        // var v = new Vue({
+        //     // 不建议写lambal表达式
+        //     data() {
+        //         return {
+        //             name: "Hello World!"
+        //         }
+        //     },
+        // });
+        var v = new Vue({
+            data: function () {
+                return {
+                    name: "Hello World!"
+                }
+            },
+        });
+        console.log(v);
+        // 代码绑定元素
+        v.$mount("#root");
+
+        Object.defineProperties
+    </script>
+</body>
+
+</html>

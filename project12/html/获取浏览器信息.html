@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			// 获取浏览器（名称、内核，版本号）
+			//获取浏览器名称
+			function getBrowser() {
+			  const ua = window.navigator.userAgent.toLowerCase(), opera = window.opera;
+			  var browser = {
+			    ie: /(msie\s|trident.*rv:)([\w.]+)/.test(ua),
+			    //检测当前浏览器是否为Opera  
+			    opera: (!!opera && opera.version),
+			    //检测当前浏览器是否是webkit内核的浏览器  
+			    webkit: (ua.indexOf(' applewebkit/') > -1),
+			    msie: false,
+			    firefox: false,
+			    safari: false,
+			    chrome: false,
+			    netscape: false,
+			    appname: 'unknown',
+			    version: 0
+			  };
+			 
+			 
+			  browser.core = (ua.indexOf(' applewebkit/') > -1) ? 'Webkit' : (navigator.product == 'Gecko' && !browser.webkit && !browser.opera && !browser.ie) ? 'Gecko' : browser.ie ? 'Trident' : 'Blink';
+			  if (/(msie|firefox|opera|chrome|netscape)\D+(\d[\d.]*)/.test(ua)) {
+			    browser[RegExp.$1] = true;
+			    browser.appname = RegExp.$1;
+			    browser.version = RegExp.$2;
+			  } else if (/version\D+(\d[\d.]*).*safari\D+(\d[\d.]*)/.test(ua)) {
+			    // safari
+			    browser.safari = true;
+			    browser.appname = 'safari';
+			    browser.version = RegExp.$2;
+			  }
+			  return {
+			    appname: browser.appname,
+			    version: browser.version,
+			    core: browser.core
+			  };
+			}
+			
+			console.log(getBrowser())
+		</script>
+	</head>
+	<body>
+		<p>计算机</p>
+	</body>
+</html>

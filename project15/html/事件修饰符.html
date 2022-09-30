@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        {{name}}
+        <!-- prevent 阻止事件执行 -->
+        <a href="https:www.baidu.com" @click.prevent="showinfo">点击一下</a>
+        <!-- stop 阻止事件冒泡 -->
+        <a href="https:www.baidu.com" @click.stop="showinfo">点击一下</a>
+
+        <!-- once 事件只执行一次 -->
+        <a href="https:www.baidu.com" @click.once="showinfo">点击一下</a>
+    </div>
+
+    <script type="text/javascript">
+        new Vue({
+            el: "#root",
+            data() {
+                return {
+                    name: "Hello World!"
+                }
+            },
+            methods: {
+                showinfo(e) {
+                    //  e.preventDefault();
+
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

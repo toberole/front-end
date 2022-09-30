@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .img-list {
+            position: relative;
+            width: 590px;
+            height: 470px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+
+        .img-list li {
+            position: absolute;
+        }
+
+        .pointer {
+            /* 相对定位 是相对于其开启了定位的包含块元素 */
+            position: absolute;
+            z-index: 9999;
+            left: 30px;
+            bottom: 30px;
+        }
+
+        .pointer a {
+            height: 10px;
+            width: 10px;
+            background-color: #FF0000;
+            float: left;
+            border-radius: 50px;
+            margin-left: 5px;
+        }
+
+        .pointer .active {
+            border: 2px solid #00FF00;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="img-list">
+        <li><a href="javascript:;"><img src="../img/7.jpg" alt=""></a></li>
+        <li><a href="javascript:;"><img src="../img/8.jpg" alt=""></a></li>
+        <li><a href="javascript:;"><img src="../img/9.jpg" alt=""></a></li>
+
+        <div class="pointer">
+            <a class="active" href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+        </div>
+    </ul>
+
+</body>
+
+</html>

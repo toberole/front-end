@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css1</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        /* "*"选中所有元素 */
+        * {}
+
+        /* 交集选择器 必须以标签元素开头 */
+        div.p1 {
+            color: aliceblue;
+        }
+
+        /* 并集选择器 */
+        .p1,
+        .p2 {
+            color: blanchedalmond;
+        }
+
+        /* 
+            关系选择器 
+            子元素选择器 
+                div > p{} 选中div中的子元素p
+            后代元素选择器
+                div p{} 选中div后代元素p
+            
+            兄弟选择器
+                div+p{}选div后面的第一个p，div 和 p必须是同级元素     
+                div~p{}选div后面的所有的p，div 和 p必须是同级元素
+            
+            属性选择器
+                p[title=abc] 选择p标签 title属性值为abc的元素
+        */
+    </style>
+</head>
+
+<body>
+    <!-- 行内设置样式 -->
+    <p style="color: rgb(165, 34, 34);">计算机</p>
+
+    <div>
+        <p class="p1"> 计算机</p>
+
+        <p class="p2"> 计算机</p>
+    </div>
+
+    <div>
+        <h1>hhhh</h1>
+        <a href="">aaaaa</a>
+    </div>
+</body>
+
+</html>

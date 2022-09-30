@@ -1,0 +1,111 @@
+@lightPrimaryColor: #c5cae9;
+@textPrimaryColor: #fff;
+@accentColor: rgb(99, 137, 185);
+@primaryTextColor: #646464;
+@secondaryTextColor: #000;
+@dividerColor: #b6b6b6;
+@borderColor: #dadada;
+
+// 选择器 变成 动态
+@mySelector: #wrap;
+@Wrap: wrap;
+
+@{mySelector} {
+    //变量名 必须使用大括号包裹
+    color: #999;
+    width: 50%;
+}
+
+.@{Wrap} {
+    color: #ccc;
+}
+
+#@{Wrap} {
+    color: #666;
+}
+
+// 属性变量
+/* Less */
+@borderStyle: border-style;
+@Soild: solid;
+
+#wrap {
+    @{borderStyle}: @Soild; //变量名 必须使用大括号包裹
+}
+
+/* 生成的 CSS */
+#wrap {
+    border-style: solid;
+}
+
+// url 变量
+@images: "../img"; //需要加引号
+
+body {
+    background: url("@{images}/dog.png"); //变量名 必须使用大括号包裹
+}
+
+/* 生成的 CSS */
+body {
+    background: url("../img/dog.png");
+}
+
+// 声明变量
+/*
+结构: @name: { 属性: 值 ;};
+使用：@name();
+*/
+/* Less */
+@background: {
+    background: red;
+}
+
+#main {
+    @background();
+}
+
+@Rules: {
+    width: 200px;
+    height: 200px;
+    border: solid 1px red;
+}
+
+#con {
+    @Rules();
+}
+
+/* 生成的 CSS */
+#main {
+    background: red;
+}
+
+#con {
+    width: 200px;
+    height: 200px;
+    border: solid 1px red;
+}
+
+// 变量运算
+/*
+加减法时 以第一个数据的单位为基准
+乘除法时 注意单位一定要统一
+*/
+/* Less */
+@width:300px;
+@color:#222;
+#wrap{
+  width:@width-20;
+  height:@width-20*5;
+  margin:(@width-20)*5;
+  color:@color*2;
+  background-color:@color + #111;
+}
+
+/* 生成的 CSS */
+#wrap{
+  width:280px;
+  height:200px;
+  margin:1400px;
+  color:#444;
+  background-color:#333;
+}

@@ -1,0 +1,51 @@
+#wrap {
+  color: #999;
+  width: 50%;
+}
+.wrap {
+  color: #ccc;
+}
+#wrap {
+  color: #666;
+}
+/* Less */
+#wrap {
+  border-style: solid;
+}
+/* 生成的 CSS */
+#wrap {
+  border-style: solid;
+}
+body {
+  background: url("../img/dog.png");
+}
+/* 生成的 CSS */
+body {
+  background: url("../img/dog.png");
+}
+/*
+结构: @name: { 属性: 值 ;};
+使用：@name();
+*/
+/* Less */
+#main {
+  background: red;
+}
+#con {
+  width: 200px;
+  height: 200px;
+  border: solid 1px red;
+}
+/* 生成的 CSS */
+#main {
+  background: red;
+}
+#con {
+  width: 200px;
+  height: 200px;
+  border: solid 1px red;
+}
+/*
+加减法时 以第一个数据的单位为基准
+乘除法时 注意单位一定要统一
+*/

@@ -1,0 +1,23 @@
+// CSS扩展预处理器 Sass、Less 、Stylus
+@Test: 300px;
+@color: #cccccc;
+@color1: #FF00FF;
+
+.box {
+    background-color: @color;
+    width: @Test;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.box1 {
+    background-color: @color1;
+    height: 200px;
+    width: @Test + 100;
+}
+
+#id1 {
+    width: 100px;
+    height: 300px;
+    background-color: antiquewhite;
+}
